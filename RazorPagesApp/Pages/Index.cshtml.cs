@@ -17,9 +17,16 @@ namespace RazorPagesApp.Pages
             _logger = logger;
         }
 
+        [BindProperty(SupportsGet = true)]
+        public string Reviews { get; set; }
+        public string ReviewsExist { get; set; }
+
         public void OnGet()
         {
-
+            if (string.IsNullOrWhiteSpace(Reviews))
+            {
+                ReviewsExist = "";
+            }
         }
     }
 }
