@@ -1,4 +1,42 @@
 ﻿@page
 @model RazorPagesApp.Pages.Forms.AddReviewModel
 @{
+    ViewData["Title"] = "Add Review";
 }
+
+<section class="review__section">
+    <h1>Review a Movie!</h1>
+    <form method="post" class="review__form">
+        <div class="input__section" >
+            <p>What name should we put on the review?</p>
+            <span asp-validation-for="Review.ReviewerName" class="text-danger" ></span>
+            <input type="text" asp-for="Review.ReviewerName" class="review__input" placeholder="Your Name" />
+        </div>
+        <div class="input__section" >
+            <p>Give your review a title...</p>
+            <span asp-validation-for="Review.ReviewTitle" class="text-danger" ></span>
+            <input type="text" asp-for="Review.ReviewTitle" class="review__input" placeholder="Title of Review" />
+        </div>
+        <div class="input__section" >
+            <p>What movie would you like to review?</p>
+            <span asp-validation-for="Review.MovieTitle" class="text-danger" ></span>
+            <input type="text" asp-for="Review.MovieTitle" class="review__input" placeholder="Movie Name" />
+        </div>
+        <div class="input__section">
+            <p>How many stars would you give this movie?</p>
+            <select name="Stars" asp-for="Review.Stars" class="review__dropdown">
+                <option value="1/5">&#11088;</option>
+                <option value="2/5">&#11088;&#11088;</option>
+                <option value="3/5">&#11088;&#11088;&#11088;</option>
+                <option value="4/5">&#11088;&#11088;&#11088;&#11088;</option>
+                <option value="5/5">&#11088;&#11088;&#11088;&#11088;&#11088;</option>
+            </select>
+        </div>
+        <div class="input__section">
+            <p>What did you think about the movie?</p>
+            <span asp-validation-for="Review.ReviewBody" class="text-danger" ></span>
+            <textarea type="text" asp-for="Review.ReviewBody" class="review__inputBody" placeholder="Write your review..."></textarea>
+        </div>
+        <button type="submit" class="review__submitButton">Submit Review</button>
+    </form>
+</section>
