@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -18,14 +19,32 @@ namespace RazorPagesApp.Pages
         }
 
         [BindProperty(SupportsGet = true)]
-        public string Reviews { get; set; }
-        public string ReviewsExist { get; set; }
+        public string ReviewerName { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string ReviewTitle { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string MovieTitle { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string Stars { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string ReviewBody { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string ReviewHeader { get; set; }
 
         public void OnGet()
         {
-            if (string.IsNullOrWhiteSpace(Reviews))
+            if (string.IsNullOrWhiteSpace(ReviewerName))
             {
-                ReviewsExist = "";
+                ReviewHeader = "";
+            }
+            else
+            {
+                ReviewHeader = "Your Review:";
             }
         }
     }
