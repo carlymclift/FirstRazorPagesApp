@@ -72,6 +72,11 @@ a {
   flex-direction: row;
 }
 
+.review__warningText {
+ color: red;
+ font-size: small;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
