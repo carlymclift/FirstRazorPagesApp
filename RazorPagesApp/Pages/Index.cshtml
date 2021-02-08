@@ -13,4 +13,15 @@
     <p>@Model.Stars</p>
     <p>@Model.ReviewBody</p>
     <h2>Movies</h2>
+
+    @{ List<Models.Movie> people = Models.ListManager.LoadSampleData();
+
+        @foreach( var person in people )
+        {
+            <div>
+                <h4>@person.Title</h4>
+            </div>
+        }
+    }
+
 </div>
