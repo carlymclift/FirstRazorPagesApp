@@ -27,7 +27,7 @@ a {
 /*  Review Page - Form
 ---------------------------------------------------- */
 
-.review__section {
+/*.review__section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +75,7 @@ a {
 .review__warningText {
  color: red;
  font-size: small;
-}
+}*/
 
 /* Sticky footer styles
 -------------------------------------------------- */

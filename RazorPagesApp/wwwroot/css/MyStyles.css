@@ -1,0 +1,54 @@
+﻿.review__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review__form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.review__input {
+    border-radius: 3px;
+    height: 30px;
+    width: 30%;
+    /*    margin-top: 10px;*/
+    border: solid 1px black;
+}
+
+.review__inputBody {
+    border-radius: 5px;
+    height: 200px;
+    width: 30%;
+    /*    margin-top: 10px;*/
+    border: solid 1px black;
+}
+
+.review__dropdown {
+    border: none;
+    height: 30px;
+    width: 15%;
+    /*    margin-top: 10px;*/
+}
+
+.review__submitButton {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    width: 35%;
+}
+
+.input__section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review__warningText {
+    color: red;
+    font-size: small;
+    align-self: flex-end;
+}

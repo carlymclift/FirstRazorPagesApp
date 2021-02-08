@@ -9,19 +9,19 @@
     <form method="post" class="review__form">
         <div class="input__section" >
             <p>What name should we put on the review?</p>
-            <span asp-validation-for="Review.ReviewerName" class="review__warningText" ></span>
             <input type="text" asp-for="Review.ReviewerName" class="review__input" placeholder="Your Name" />
         </div>
+            <span asp-validation-for="Review.ReviewerName" class="review__warningText" ></span>
         <div class="input__section" >
             <p>Give your review a title...</p>
-            <span asp-validation-for="Review.ReviewTitle" class="review__warningText" ></span>
             <input type="text" asp-for="Review.ReviewTitle" class="review__input" placeholder="Title of Review" />
         </div>
+            <span asp-validation-for="Review.ReviewTitle" class="review__warningText" ></span>
         <div class="input__section" >
             <p>What movie would you like to review?</p>
-            <span asp-validation-for="Review.MovieTitle" class="review__warningText" ></span>
             <input type="text" asp-for="Review.MovieTitle" class="review__input" placeholder="Movie Name" />
         </div>
+            <span asp-validation-for="Review.MovieTitle" class="review__warningText" ></span>
         <div class="input__section">
             <p>How many stars would you give this movie?</p>
             <select name="Stars" asp-for="Review.Stars" class="review__dropdown">
@@ -34,9 +34,9 @@
         </div>
         <div class="input__section">
             <p>What did you think about the movie?</p>
-            <span asp-validation-for="Review.ReviewBody" class="review__warningText" ></span>
             <textarea type="text" asp-for="Review.ReviewBody" class="review__inputBody" placeholder="Write your review..."></textarea>
         </div>
+            <span asp-validation-for="Review.ReviewBody" class="review__warningText" ></span>
         <button type="submit" class="review__submitButton">Submit Review</button>
     </form>
 </section>
